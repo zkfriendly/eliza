@@ -44,6 +44,7 @@ import {
 } from "@elizaos/plugin-coinbase";
 import { confluxPlugin } from "@elizaos/plugin-conflux";
 import { evmPlugin } from "@elizaos/plugin-evm";
+import { zkemailPlugin } from "@elizaos/plugin-zkemail";
 import { storyPlugin } from "@elizaos/plugin-story";
 import { flowPlugin } from "@elizaos/plugin-flow";
 import { fuelPlugin } from "@elizaos/plugin-fuel";
@@ -600,6 +601,7 @@ export async function createAgent(
             getSecret(character, "AVALANCHE_PRIVATE_KEY")
                 ? avalanchePlugin
                 : null,
+            zkemailPlugin,
         ].filter(Boolean),
         providers: [],
         actions: [],
